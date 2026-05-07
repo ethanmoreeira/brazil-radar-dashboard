@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 504">
+  <!-- Retângulo verde -->
+  <rect width="720" height="504" fill="#009739"/>
+  <!-- Losango amarelo -->
+  <polygon points="360,40 668,252 360,464 52,252" fill="#FFCD00"/>
+  <!-- Círculo azul -->
+  <circle cx="360" cy="252" r="140" fill="#002776"/>
+  <!-- Faixa branca (simplificada) -->
+  <path d="M 220,252 Q 290,200 360,220 Q 430,240 500,252 Q 430,264 360,284 Q 290,304 220,252 Z" fill="#FFFFFF" opacity="0.35"/>
+</svg>

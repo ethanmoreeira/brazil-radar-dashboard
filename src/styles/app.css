@@ -1,0 +1,487 @@
+/* ============================================================
+   Radar Brasil G8 — Design System
+   ============================================================ */
+
+/* ── Base ──────────────────────────────────────────────────── */
+body {
+  background-color: var(--rb-bg);
+  color: var(--rb-text);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.55;
+}
+
+a {
+  text-decoration: none;
+  transition: color var(--rb-transition);
+}
+
+/* ── Focus visible global ─────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--rb-blue);
+  outline-offset: 2px;
+}
+
+/* ── Layout ────────────────────────────────────────────────── */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  padding: 2rem 1rem 3rem;
+  flex: 1;
+}
+
+.dashboard-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Navbar refinada ───────────────────────────────────────── */
+.radar-navbar {
+  background-color: var(--rb-blue-dark) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.radar-navbar .navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--rb-radius-md);
+  transition: all var(--rb-transition);
+  margin: 0 0.1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.radar-navbar .navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.radar-navbar .navbar-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--rb-yellow) !important;
+  font-weight: 600;
+}
+
+.badge-g8 {
+  background-color: var(--rb-yellow);
+  color: var(--rb-blue-dark);
+  font-weight: 800;
+  padding: 0.2em 0.55em;
+  border-radius: 50rem;
+  letter-spacing: 0.5px;
+  font-size: 0.7rem;
+}
+
+.btn-logout {
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.35rem 1rem;
+  border-radius: var(--rb-radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  transition: all var(--rb-transition);
+}
+
+.btn-logout:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+/* ── Cards globais ─────────────────────────────────────────── */
+.radar-card {
+  background-color: var(--rb-card);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  box-shadow: var(--rb-shadow-sm);
+  transition: all var(--rb-transition);
+  overflow: hidden;
+}
+
+.radar-card-hoverable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--rb-shadow-md);
+  border-color: rgba(11, 46, 109, 0.15);
+}
+
+/* ── Section Header ────────────────────────────────────────── */
+.section-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--rb-border);
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rb-blue), var(--rb-green));
+  border-radius: 2px;
+}
+
+.section-header h2 {
+  font-weight: 700;
+  color: var(--rb-blue-dark);
+  margin-bottom: 0.35rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+.section-header p {
+  color: var(--rb-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ── Dashboard Hero ────────────────────────────────────────── */
+.hero-radar {
+  background: linear-gradient(135deg, var(--rb-blue-dark) 0%, var(--rb-blue) 50%, var(--rb-green-dark) 100%);
+  color: white;
+  padding: 1.5rem 2rem;
+  border-radius: var(--rb-radius-lg);
+  margin-bottom: 1.75rem;
+  box-shadow: var(--rb-shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-radar::after {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(244, 197, 66, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Icon containers ───────────────────────────────────────── */
+.icon-container {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rb-radius-md);
+  background-color: var(--rb-blue-light);
+  color: var(--rb-blue);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: all var(--rb-transition);
+}
+
+.radar-card-hoverable:hover .icon-container {
+  background-color: var(--rb-blue);
+  color: white;
+  transform: scale(1.08);
+}
+
+/* ── Placeholder / Empty ───────────────────────────────────── */
+.placeholder-box {
+  background-color: var(--rb-card);
+  border: 1px dashed var(--rb-border);
+  border-radius: var(--rb-radius-lg);
+  padding: 2rem;
+  text-align: center;
+  color: var(--rb-muted);
+}
+
+/* ── Data Display — JSON Viewer ────────────────────────────── */
+.json-viewer-container {
+  margin-top: 2rem;
+}
+
+.json-viewer {
+  background-color: #1E293B;
+  border-radius: var(--rb-radius-lg);
+}
+
+.json-viewer pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* ── Action rows ───────────────────────────────────────────── */
+.cep-actions,
+.ddd-actions,
+.feriados-actions,
+.export-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.helper-text {
+  font-size: 0.78rem;
+  color: var(--rb-muted);
+}
+
+/* ── Search / filter components ────────────────────────────── */
+.search-card,
+.ddd-search-card,
+.feriados-filter-card {
+  transition: box-shadow var(--rb-transition);
+}
+
+.search-input:focus,
+.export-form-card input:focus,
+.export-form-card textarea:focus {
+  box-shadow: none !important;
+  border-color: var(--rb-blue) !important;
+}
+
+/* ── Export layout ─────────────────────────────────────────── */
+.export-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(320px, 0.8fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.export-email-panel {
+  position: sticky;
+  top: 96px;
+}
+
+.history-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.history-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.history-list::-webkit-scrollbar-track {
+  background: var(--rb-bg);
+  border-radius: 10px;
+}
+
+.history-list::-webkit-scrollbar-thumb {
+  background: var(--rb-border);
+  border-radius: 10px;
+}
+
+.email-success {
+  background-color: var(--rb-success-light);
+  color: var(--rb-success);
+}
+
+/* ── Export selection ──────────────────────────────────────── */
+.export-selection-info {
+  background-color: var(--rb-bg);
+  border: 1px solid var(--rb-border);
+}
+
+.history-card--selected {
+  border: 2px solid var(--rb-blue) !important;
+  box-shadow: 0 0 0 3px rgba(11, 46, 109, 0.08) !important;
+}
+
+.history-card-checkbox {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.history-card-checkbox .form-check-input {
+  width: 1.1em;
+  height: 1.1em;
+  border-color: var(--rb-border);
+  cursor: pointer;
+}
+
+.history-card-checkbox .form-check-input:checked {
+  background-color: var(--rb-blue);
+  border-color: var(--rb-blue);
+}
+
+.export-selection-badge {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ── DDD components ────────────────────────────────────────── */
+.city-pill {
+  transition: all var(--rb-transition);
+}
+
+.city-pill:hover {
+  background-color: var(--rb-blue-light) !important;
+  border-color: rgba(11, 46, 109, 0.15) !important;
+}
+
+.city-filter-info,
+.filter-info {
+  font-weight: 500;
+}
+
+.city-empty-message {
+  background-color: var(--rb-bg);
+  border: 1px dashed var(--rb-border);
+  border-radius: var(--rb-radius-md);
+}
+
+/* ── Feriados components ───────────────────────────────────── */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer:hover {
+  opacity: 0.85;
+}
+
+.year-shortcut-btn {
+  transition: all var(--rb-transition);
+}
+
+.year-shortcut-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* ── Stat cards ────────────────────────────────────────────── */
+.stat-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--rb-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* ── Estado card accent ────────────────────────────────────── */
+.estado-sigla {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--rb-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  background-color: var(--rb-blue-light);
+  color: var(--rb-blue);
+  transition: all var(--rb-transition);
+}
+
+.radar-card-hoverable:hover .estado-sigla {
+  background-color: var(--rb-blue);
+  color: #fff;
+}
+
+.regiao-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3em 0.6em;
+  border-radius: 50rem;
+  background-color: var(--rb-green-light);
+  color: var(--rb-green);
+  border: 1px solid rgba(31, 138, 76, 0.15);
+}
+
+/* ── Sobre page ────────────────────────────────────────────── */
+.sobre-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--rb-radius-md);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rb-blue-light);
+  color: var(--rb-blue);
+  flex-shrink: 0;
+}
+
+/* ── Login page ────────────────────────────────────────────── */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--rb-bg) 0%, #EEF1F6 50%, var(--rb-yellow-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.login-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/brasil-flag.svg') no-repeat center / cover;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.login-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.login-card {
+  border-radius: var(--rb-radius-xl) !important;
+  border: 1px solid var(--rb-border) !important;
+  overflow: hidden;
+}
+
+.login-card .login-accent-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--rb-blue) 0%, var(--rb-green) 50%, var(--rb-yellow) 100%);
+}
+
+/* ── Utils ─────────────────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--rb-green) 0%, var(--rb-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Media Queries ─────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .export-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .export-email-panel {
+    position: static;
+  }
+
+  .history-list {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1.25rem 0.75rem 2rem;
+  }
+
+  .hero-radar {
+    padding: 1.25rem 1rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.35rem;
+  }
+}
