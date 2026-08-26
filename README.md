@@ -236,13 +236,10 @@ Abaixo estão alguns prints do sistema funcionando.
 
 ![Página 404 personalizada](docs/screenshots/11-404.png)
 
-## Membros do grupo G8
+## Responsabilidade principal
 
-- Gabriel Fagundes Motta
-- Ítalo Dias Moreira Campos
-- Julyanne Lauriano Genevain
-- Rakel Garcia da Silva
-- Raphaell Reiff Galoni
+**Technical lead and primary developer:** Ítalo Dias Moreira Campos  
+**Context:** Projeto acadêmico apresentado como trabalho do Grupo G8.
 
 ## Observação
 
