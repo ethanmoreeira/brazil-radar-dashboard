@@ -17,7 +17,7 @@ function App() {
   const isAuthenticated = localStorage.getItem("auth") === "true";
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/brazil-radar-dashboard">
       <Routes>
         <Route path="/" element={<Navigate to={isAuthenticated ? "/app" : "/login"} replace />} />
         <Route path="/login" element={<Login />} />
